@@ -1,5 +1,5 @@
 {
-  "supervisionUrls": ["ws://localhost:8010/OCPP16/5be7fb271014d90008992f06"],
+  "supervisionUrls": ["ws://emobility-dev-alb-d4c49b39c90fb0c5.elb.eu-central-1.amazonaws.com:8010/OCPP16/5be7fb271014d90008992f06"],
   "supervisionUrlDistribution": "round-robin",
   "log": {
     "file": "logs/combined.log",
@@ -15,13 +15,13 @@
     "type": "none"
   },
   "uiServer": {
-    "enabled": false,
+    "enabled": true,
     "type": "ws",
     "authentication": {
       "enabled": true,
       "type": "protocol-basic-auth",
-      "username": "admin",
-      "password": "admin"
+      "username": "Admin",
+      "password": "${EMOBILITY_UISERVER_PASSWORD}"
     }
   },
   "stationTemplateUrls": [
