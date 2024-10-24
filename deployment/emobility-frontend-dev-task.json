@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-central-2:159623514083:task-definition/emobility-frontend-dev-task:2",
+    "taskDefinitionArn": "arn:aws:ecs:eu-central-2:159623514083:task-definition/emobility-frontend-dev-task:3",
     "containerDefinitions": [
         {
             "name": "emobility-frontend",
-            "image": "159623514083.dkr.ecr.eu-central-2.amazonaws.com/emobility-frontend",
+            "image": "159623514083.dkr.ecr.eu-central-2.amazonaws.com/emobility-frontend:latest",
             "cpu": 0,
             "portMappings": [
                 {
@@ -39,7 +39,7 @@
     "taskRoleArn": "arn:aws:iam::159623514083:role/TaskIAMRole",
     "executionRoleArn": "arn:aws:iam::159623514083:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 2,
+    "revision": 3,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -88,7 +88,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-10-24T13:38:52.205Z",
+    "registeredAt": "2024-10-24T13:58:06.594Z",
     "registeredBy": "arn:aws:iam::159623514083:root",
     "tags": []
 }
