@@ -18,6 +18,8 @@ WORKDIR /usr/app
 COPY --from=builder /usr/builder ./
 COPY ui/web/docker/run.sh /run.sh
 COPY ui/web/docker/autoconfig.sh /autoconfig.sh
+COPY ui/web/start.js /usr/app/start.js
+
 RUN set -ex \
   && chmod +x /run.sh \
   && chmod +x /autoconfig.sh
