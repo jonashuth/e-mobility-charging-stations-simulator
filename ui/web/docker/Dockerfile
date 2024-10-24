@@ -9,7 +9,7 @@ RUN set -ex \
   && pnpm set progress=false \
   && pnpm config set depth 0 \
   && pnpm install --ignore-scripts \
-  && cp ui/web/docker/config.json ui/web/public/config.json \
+  && cp docker/config.json public/config.json \
   && pnpm build
 
 FROM node:lts-alpine
@@ -17,14 +17,14 @@ FROM node:lts-alpine
 WORKDIR /usr/app
 
 # Kopiere den gesamten Inhalt von ui/web ins Zielverzeichnis, um sicherzustellen, dass alle Dateien verfügbar sind
-COPY --from=builder /usr/builder/ui/web ./web
+COPY --from=builder /usr/builder .
 
 # Kopiere die Scripte ins richtige Verzeichnis
-COPY ui/web/docker/run.sh /run.sh
-COPY ui/web/docker/autoconfig.sh /autoconfig.sh
+COPY docker/run.sh /run.sh
+COPY docker/autoconfig.sh /autoconfig.sh
 
 # Füge den Start-Skript hinzu, falls er benötigt wird
-COPY ui/web/start.js /usr/app/start.js
+COPY start.js /usr/app/start.js
 
 RUN set -ex \
   && chmod +x /run.sh \
