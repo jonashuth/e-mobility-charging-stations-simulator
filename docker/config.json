@@ -1,5 +1,5 @@
 {
-  "supervisionUrls": ["ws://server:8010/OCPP16/5c866e81a2d9593de43efdb4"],
+  "supervisionUrls": ["ws://internal-emobility-dev-alb-1194665738.eu-central-2.elb.amazonaws.com:8010/OCPP16/5c866e81a2d9593de43efdb4"],
   "supervisionUrlDistribution": "round-robin",
   "log": {
     "file": "/dev/stdout",
