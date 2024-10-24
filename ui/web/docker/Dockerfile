@@ -15,9 +15,15 @@ RUN set -ex \
 FROM node:lts-alpine
 
 WORKDIR /usr/app
-COPY --from=builder /usr/builder ./
+
+# Kopiere den gesamten Inhalt von ui/web ins Zielverzeichnis, um sicherzustellen, dass alle Dateien verfügbar sind
+COPY --from=builder /usr/builder/ui/web ./web
+
+# Kopiere die Scripte ins richtige Verzeichnis
 COPY ui/web/docker/run.sh /run.sh
 COPY ui/web/docker/autoconfig.sh /autoconfig.sh
+
+# Füge den Start-Skript hinzu, falls er benötigt wird
 COPY ui/web/start.js /usr/app/start.js
 
 RUN set -ex \
