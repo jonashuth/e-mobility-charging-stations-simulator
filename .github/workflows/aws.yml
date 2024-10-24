@@ -35,7 +35,7 @@ env:
   ECR_REPOSITORY: e-mobility-charging-stations-simulator           # set this to your Amazon ECR repository name
   ECS_SERVICE: e-mobility-charging-stations-simulator-dev-service                 # set this to your Amazon ECS service name
   ECS_CLUSTER: e-mobility-charging-stations-simulator-dev-eks-eu-central-2                 # set this to your Amazon ECS cluster name
-  ECS_TASK_DEFINITION: deployment/e-mobility-charging-stations-simulator-dev-task-revision1.json # set this to the path to your Amazon ECS task definition
+  ECS_TASK_DEFINITION: deployment/e-mobility-charging-stations-simulator-dev-task.json # set this to the path to your Amazon ECS task definition
                                                # file, e.g. .aws/task-definition.json
   CONTAINER_NAME: e-mobility-charging-stations-simulator           # set this to the name of the container in the
                                                # containerDefinitions section of your task definition
