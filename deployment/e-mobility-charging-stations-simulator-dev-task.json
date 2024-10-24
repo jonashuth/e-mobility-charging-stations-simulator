@@ -1,15 +1,15 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-central-2:159623514083:task-definition/e-mobility-charging-stations-simulator-dev-task:9",
+    "taskDefinitionArn": "arn:aws:ecs:eu-central-2:159623514083:task-definition/e-mobility-charging-stations-simulator-dev-task:15",
     "containerDefinitions": [
         {
             "name": "e-mobility-charging-stations-simulator",
-            "image": "159623514083.dkr.ecr.eu-central-2.amazonaws.com/e-mobility-charging-stations-simulator:27e1fe65c88458999dc59d691b87fe2fcde4bae6",
+            "image": "159623514083.dkr.ecr.eu-central-2.amazonaws.com/e-mobility-charging-stations-simulator:5470aac7781000a3cd81b3937a043007120e6de9",
             "cpu": 0,
             "portMappings": [
                 {
                     "name": "e-mobility-charging-stations-simulator-80-tcp",
-                    "containerPort": 80,
-                    "hostPort": 80,
+                    "containerPort": 8010,
+                    "hostPort": 8010,
                     "protocol": "tcp",
                     "appProtocol": "http"
                 }
@@ -27,15 +27,17 @@
                     "max-buffer-size": "25m",
                     "awslogs-region": "eu-central-2",
                     "awslogs-stream-prefix": "ecs"
-                }
+                },
+                "secretOptions": []
             },
             "systemControls": []
         }
     ],
     "family": "e-mobility-charging-stations-simulator-dev-task",
+    "taskRoleArn": "arn:aws:iam::159623514083:role/TaskIAMRole",
     "executionRoleArn": "arn:aws:iam::159623514083:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 9,
+    "revision": 15,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -53,6 +55,9 @@
         },
         {
             "name": "com.amazonaws.ecs.capability.docker-remote-api.1.28"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
         },
         {
             "name": "ecs.capability.execution-role-ecr-pull"
@@ -81,7 +86,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-10-24T10:28:14.148Z",
+    "registeredAt": "2024-10-24T11:05:01.323Z",
     "registeredBy": "arn:aws:iam::159623514083:root",
     "tags": []
 }
