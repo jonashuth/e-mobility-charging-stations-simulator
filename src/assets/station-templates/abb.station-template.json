@@ -60,7 +60,7 @@
     "minDelayBetweenTwoTransactions": 300,
     "maxDelayBetweenTwoTransactions": 3600,
     "probabilityOfStart": 1,
-    "stopAfterHours": 0.3,
+    "stopAfterHours": 24,
     "requireAuthorize": true
   },
   "Connectors": {
