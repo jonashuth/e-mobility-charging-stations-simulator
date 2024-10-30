@@ -1,5 +1,5 @@
 {
-  "supervisionUrls": ["${{ secrets.SAP_SUPERVISION_URL }}"],
+  "supervisionUrls": ["${SUPERVISION_URL}"],
   "supervisionUrlDistribution": "round-robin",
   "log": {
     "file": "/dev/stdout",
