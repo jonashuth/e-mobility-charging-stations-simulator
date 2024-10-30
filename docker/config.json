@@ -1,5 +1,5 @@
 {
-  "supervisionUrls": ["${SUPERVISION_URL}"],
+  "supervisionUrls": ["wss://ocpp.eu10.e-mobility.cloud.sap/OCPP16/12100885-c994-4f7e-8c2d-808c5f58bef2/2f33a0a4-c4ca-4657-9643-66bf7b81c611"],
   "supervisionUrlDistribution": "round-robin",
   "log": {
     "file": "/dev/stdout",
