@@ -29,27 +29,27 @@
   "stationTemplateUrls": [
     {
       "file": "siemens.station-template.json",
-      "numberOfStations": 1
+      "numberOfStations": 0
     },
     {
       "file": "keba.station-template.json",
-      "numberOfStations": 1
+      "numberOfStations": 0
     },
     {
       "file": "abb.station-template.json",
-      "numberOfStations": 1
+      "numberOfStations": 5
     },
     {
       "file": "evlink.station-template.json",
-      "numberOfStations": 1
+      "numberOfStations": 0
     },
     {
       "file": "schneider.station-template.json",
-      "numberOfStations": 1
+      "numberOfStations": 0
     },
     {
       "file": "virtual-simple-atg.station-template.json",
-      "numberOfStations": 1
+      "numberOfStations": 0
     }
   ]
 }
