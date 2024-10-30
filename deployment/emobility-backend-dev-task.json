@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:eu-central-2:159623514083:task-definition/emobility-backend-dev-task:11",
+    "taskDefinitionArn": "arn:aws:ecs:eu-central-2:159623514083:task-definition/emobility-backend-dev-task:13",
     "containerDefinitions": [
         {
             "name": "emobility-backend",
-            "image": "159623514083.dkr.ecr.eu-central-2.amazonaws.com/emobility-backend:dd2a34dab7452c8cdff901059e7767c877414b55",
+            "image": "159623514083.dkr.ecr.eu-central-2.amazonaws.com/emobility-backend:4205b5525a49ba4b64f3c75aeda5e12c94746d47",
             "cpu": 0,
             "portMappings": [
                 {
@@ -15,7 +15,12 @@
                 }
             ],
             "essential": true,
-            "environment": [],
+            "environment": [
+                {
+                    "name": "SAP_SUPERVISION_URL",
+                    "value": "wss://ocpp.eu10.e-mobility.cloud.sap/OCPP16/12100885-c994-4f7e-8c2d-808c5f58bef2/2f33a0a4-c4ca-4657-9643-66bf7b81c611"
+                }
+            ],
             "mountPoints": [],
             "volumesFrom": [],
             "logConfiguration": {
@@ -27,7 +32,8 @@
                     "max-buffer-size": "25m",
                     "awslogs-region": "eu-central-2",
                     "awslogs-stream-prefix": "ecs"
-                }
+                },
+                "secretOptions": []
             },
             "systemControls": []
         }
@@ -36,7 +42,7 @@
     "taskRoleArn": "arn:aws:iam::159623514083:role/TaskIAMRole",
     "executionRoleArn": "arn:aws:iam::159623514083:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 11,
+    "revision": 13,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -85,7 +91,8 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2024-10-24T16:38:28.831Z",
+    "registeredAt": "2024-10-30T13:10:51.825Z",
     "registeredBy": "arn:aws:iam::159623514083:root",
+    "enableFaultInjection": false,
     "tags": []
 }
